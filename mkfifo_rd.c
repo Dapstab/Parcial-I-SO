@@ -14,6 +14,10 @@ int main (int argc, char *argv[]) {
 	int numBytes = 0;
 	// Abrimos la tuberia. (Conectamos)
 	int fd1 = open(tuberia, O_RDONLY);
+	if(fd1 == -1) {
+        	printf("open error");
+        	exit(0);
+    }
 	int size = atoi(argv[1]);
 	double time_spent;
 	// Buffer
