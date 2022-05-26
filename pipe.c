@@ -59,7 +59,7 @@ int main(int argc, char *argv[]) {
 	}
 		
 	int id = fork();
-	if (pid < 0){
+	if (id < 0){
 		perror("Error en fork");
 		exit(1);
         }
