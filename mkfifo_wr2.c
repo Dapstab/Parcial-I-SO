@@ -10,6 +10,10 @@
 
 void sendData(char *tuberia, int Bnum) {	
 	int fd = open(tuberia, O_WRONLY);
+	if(fdw == -1){
+        	printf("open error");
+        	exit(0);
+   	}
 	int numIterations;
 	int numBytes = 0;
 	char *str = (char *) calloc(Bnum, sizeof(char));
