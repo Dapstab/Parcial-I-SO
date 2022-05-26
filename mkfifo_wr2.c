@@ -10,7 +10,7 @@
 
 void sendData(char *tuberia, int Bnum) {	
 	int fd = open(tuberia, O_WRONLY);
-	if(fdw == -1){
+	if(fd == -1){
         	printf("open error");
         	exit(0);
    	}
