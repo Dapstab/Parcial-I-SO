@@ -59,6 +59,10 @@ int main(int argc, char *argv[]) {
 	}
 		
 	int id = fork();
+	if (pid < 0){
+		perror("Error en fork");
+		exit(1);
+        }
 	if (id == 0) {
 		close(fd[0]);
 		sendData(fd, bytes, 1);
